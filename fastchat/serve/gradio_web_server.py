@@ -381,7 +381,7 @@ def bot_response(
         assert model_name not in openai_compatible_models_info
         prompt = conv.to_openai_api_messages()
         stream_iter = openai_api_stream_iter(
-            model_name, prompt, temperature, top_p, max_new_tokens
+            model_name, prompt, temperature, top_p, max_new_tokens, "http://frp.xwm1000.com:8000/v1", "none"
         )
     elif model_name in ANTHROPIC_MODEL_LIST:
         prompt = conv.get_prompt()
